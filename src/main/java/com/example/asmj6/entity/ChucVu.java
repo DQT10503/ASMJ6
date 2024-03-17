@@ -5,17 +5,20 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.UUID;
+
 @Entity
-@Table(name = "Products")
+@Table(name = "ChucVu")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Products {
+public class ChucVu {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    @Column(name = "ten")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private String id;
+    @Column(name = "Ma")
+    private String ma;
+    @Column(name = "Ten")
     private String ten;
-    private String hinhAnh;
 
 }
