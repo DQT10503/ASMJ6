@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
-import java.util.UUID;
+
 
 @Entity
 @Table(name = "GioHang")
@@ -15,13 +15,20 @@ import java.util.UUID;
 @Data
 public class GioHang {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private String id;
+    @Column(name = "Ma")
     private String ma;
+    @Column(name = "NgayTao")
     private Date ngayTao;
+    @Column(name = "NgayThanhToan")
     private Date ngayThanhToan;
+    @Column(name = "TenNguoiNhan")
     private String tenNguoiNhan;
+    @Column(name = "DiaChi")
     private String diaChi;
+    @Column(name = "Sdt")
     private String sdt;
-    private int tinhTrang;
+    @Column(name = "TinhTrang")
+    private int trangThai;
 }

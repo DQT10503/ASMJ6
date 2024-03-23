@@ -3,14 +3,14 @@ package com.example.asmj6.entity;
 import jakarta.persistence.*;
 
 import java.util.Date;
-import java.util.UUID;
+
 
 @Entity
 @Table(name = "HoaDon")
 public class HoaDon {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
+    private String id;
     @Column(name = "Ma")
     private String ma;
     @Column(name = "NgayTao")

@@ -8,23 +8,19 @@ import lombok.NoArgsConstructor;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "GioHangChiTiet")
+@Table(name = "HoaDonChiTiet")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class GioHangChiTiet {
+public class HoaDonChiTiet {
     @Id
     @ManyToOne
-    @JoinColumn(name = "IdGioHang")
-    private GioHang idGioHang;
+    @JoinColumn(name = "IdHoaDon")
+    private HoaDon idHoaDon;
     @Id
     @ManyToOne
     @JoinColumn(name = "IdChiTietSP")
-    private ChiTietSP idChiTietSP;
-    @Column(name = "SoLuong")
+    private ChiTietSP idChiTietSp;
     private int soLuong;
-    @Column(name = "DonGia")
     private BigDecimal donGia;
-    @Column(name = "DonGiaKhiGiam")
-    private BigDecimal donGiaKhiGiam;
 }

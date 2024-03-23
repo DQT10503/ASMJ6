@@ -2,23 +2,25 @@ package com.example.asmj6.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 
 
+@Table(name = "MauSac")
 @Entity
-@Table(name = "ChucVu")
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
-public class ChucVu {
+public class MauSac {
     @Id
+    @Column(name = "Id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private String id;
     @Column(name = "Ma")
     private String ma;
     @Column(name = "Ten")
     private String ten;
-
 }
